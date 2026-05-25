@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="utf-8">
+<title>PS3LB</title>
+
+<!-- تحميل الصور مسبقا -->
+<link rel="preload" as="image" href="2.png">
+<link rel="preload" as="image" href="3.png">
+<link rel="preload" as="image" href="4.png">
+
+<style>
+
+html,body{
+margin:0;
+padding:0;
+height:100%;
+overflow:hidden;
+}
+
+.page{
+position:absolute;
+width:100%;
+height:100%;
+display:none;
+}
+
+#home{
+display:block;
+}
+
+.bg{
+position:absolute;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.btn{
+position:absolute;
+background:transparent;
+border:2px solid #fff;
+color:#fff;
+cursor:pointer;
+}
+
+/*================ HOME ================*/
+
+#home_btn1{
+top:60%;
+left:20%;
+font-size:22px;
+padding:10px 40px;
+}
+
+#home_btn2{
+top:60%;
+left:45%;
+font-size:22px;
+padding:10px 40px;
+}
+
+#home_btn3{
+top:60%;
+left:70%;
+font-size:22px;
+padding:10px 40px;
+}
+
+/*================ PAGE 2 ================*/
+
+#p2_b1{top:60%;left:5%;font-size:18px;padding:10px 30px;}
+#p2_b2{top:60%;left:20%;font-size:18px;padding:10px 30px;}
+#p2_b3{top:60%;left:35%;font-size:18px;padding:10px 30px;}
+#p2_b4{top:60%;left:50%;font-size:18px;padding:10px 30px;}
+#p2_b5{top:60%;left:65%;font-size:18px;padding:10px 30px;}
+#p2_b6{top:60%;left:80%;font-size:18px;padding:10px 30px;}
+
+#p2_back{
+top:88%;
+left:3%;
+font-size:22px;
+padding:10px 30px;
+}
+
+/*================ PAGE 3 ================*/
+
+#p3_b1{top:60%;left:5%;font-size:18px;padding:10px 30px;}
+#p3_b2{top:60%;left:20%;font-size:18px;padding:10px 30px;}
+#p3_b3{top:60%;left:35%;font-size:18px;padding:10px 30px;}
+#p3_b4{top:60%;left:50%;font-size:18px;padding:10px 30px;}
+#p3_b5{top:60%;left:65%;font-size:18px;padding:10px 30px;}
+#p3_b6{top:60%;left:80%;font-size:18px;padding:10px 30px;}
+
+#p3_back{
+top:88%;
+left:3%;
+font-size:22px;
+padding:10px 30px;
+}
+
+/*================ PAGE 4 ================*/
+
+#p4_b1{top:50%;left:5%;font-size:18px;padding:10px 30px;}
+#p4_b2{top:50%;left:20%;font-size:18px;padding:10px 30px;}
+#p4_b3{top:50%;left:35%;font-size:18px;padding:10px 30px;}
+
+#p4_b4{top:65%;left:5%;font-size:18px;padding:10px 30px;}
+#p4_b5{top:65%;left:20%;font-size:18px;padding:10px 30px;}
+#p4_b6{top:65%;left:35%;font-size:18px;padding:10px 30px;}
+
+#p4_b7{top:80%;left:5%;font-size:18px;padding:10px 30px;}
+#p4_b8{top:80%;left:20%;font-size:18px;padding:10px 30px;}
+#p4_b9{top:80%;left:35%;font-size:18px;padding:10px 30px;}
+
+#p4_back{
+top:88%;
+left:75%;
+font-size:22px;
+padding:10px 30px;
+}
+
+</style>
+
+<script>
+
+function preloadImages(){
+
+var img1=new Image();
+var img2=new Image();
+var img3=new Image();
+
+img1.src="2.png";
+img2.src="3.png";
+img3.src="4.png";
+
+}
+
+function showPage(page){
+
+document.getElementById("home").style.display="none";
+document.getElementById("page2").style.display="none";
+document.getElementById("page3").style.display="none";
+document.getElementById("page4").style.display="none";
+
+document.getElementById(page).style.display="block";
+
+}
+
+window.onload=preloadImages;
+
+</script>
+
+</head>
+
+<body>
+
+<!-- الصفحة الرئيسية -->
+
+<div id="home" class="page">
+
+<img src="1.png" class="bg">
+
+<button id="home_btn1" class="btn"
+onclick="showPage('page2')">
+PAGE 2
+</button>
+
+<button id="home_btn2" class="btn"
+onclick="showPage('page3')">
+PAGE 3
+</button>
+
+<button id="home_btn3" class="btn"
+onclick="showPage('page4')">
+PAGE 4
+</button>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2" class="page">
+
+<img src="2.png" class="bg">
+
+<button id="p2_b1" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN1</button>
+
+<button id="p2_b2" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN2</button>
+
+<button id="p2_b3" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN3</button>
+
+<button id="p2_b4" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN4</button>
+
+<button id="p2_b5" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN5</button>
+
+<button id="p2_b6" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN6</button>
+
+<button id="p2_back" class="btn"
+onclick="showPage('home')">
+BACK
+</button>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div id="page3" class="page">
+
+<img src="3.png" class="bg">
+
+<button id="p3_b1" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN1</button>
+
+<button id="p3_b2" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN2</button>
+
+<button id="p3_b3" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN3</button>
+
+<button id="p3_b4" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN4</button>
+
+<button id="p3_b5" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN5</button>
+
+<button id="p3_b6" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN6</button>
+
+<button id="p3_back" class="btn"
+onclick="showPage('home')">
+BACK
+</button>
+
+</div>
+
+<!-- PAGE 4 -->
+
+<div id="page4" class="page">
+
+<img src="4.png" class="bg">
+
+<button id="p4_b1" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN1</button>
+<button id="p4_b2" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN2</button>
+<button id="p4_b3" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN3</button>
+
+<button id="p4_b4" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN4</button>
+<button id="p4_b5" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN5</button>
+<button id="p4_b6" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN6</button>
+
+<button id="p4_b7" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN7</button>
+<button id="p4_b8" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN8</button>
+<button id="p4_b9" class="btn" onclick="window.location='YOUR_LINK_HERE'">BTN9</button>
+
+<button id="p4_back" class="btn"
+onclick="showPage('home')">
+BACK
+</button>
+
+</div>
+
+</body>
+</html>
